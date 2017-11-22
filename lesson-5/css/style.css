@@ -1,3 +1,8 @@
+body {
+  /* Avoid header overlay */
+  padding-top: 70px;
+}
+
 #carousel-main img {
   height: 300px;
 }
