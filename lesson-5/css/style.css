@@ -9,3 +9,7 @@ body {
 #carousel-main img {
   height: 300px;
 }
+
+textarea.no-resize {
+  resize: none;
+}
