@@ -1,6 +1,9 @@
 body {
   /* Avoid header overlay */
   padding-top: 70px;
+
+  /* Necessary for scrollspy */
+  position: relative;
 }
 
 #carousel-main img {

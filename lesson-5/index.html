@@ -13,12 +13,13 @@
   <link href="css/bootstrap-theme.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
+<body data-spy="scroll" data-target="#navbar-header">
+
   <!-- HEADER -->
-  <header class="navbar navbar-default navbar-fixed-top">
+  <nav class="navbar navbar-default navbar-fixed-top" id="navbar-header">
     <div class="container-fluid">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-header-collapse" aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -27,7 +28,7 @@
         <a class="navbar-brand" href="#">Hairdresser Jarl</a>
       </div>
 
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <div class="collapse navbar-collapse" id="nav-header-collapse">
         <form class="navbar-form navbar-right">
           <div class="form-group">
             <input type="text" class="form-control" placeholder="Search">
@@ -35,14 +36,14 @@
         </form>
 
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Our Services</a></li>
+          <li><a href="#our-services-section">Our Services</a></li>
           <li><a href="#">Make an appointment</a></li>
           <li><a href="#">FAQ</a></li>
           <li><a href="#">About us</a></li>
         </ul>
       </div>
     </div>
-  </header>
+  </nav>
   <!-- !HEADER -->
 
   <!-- CAROUSEL -->
@@ -75,6 +76,43 @@
     </a>
   </div>
   <!-- !CAROUSEL -->
+
+  <hr>
+
+  <!-- OUR SERVICES-->
+  <div class="container" id="our-services-section">
+    <h1 class="text-center">Our services</h1>
+    <div class="row">
+      <div class="col-sm-12 col-md-4">
+        <div class="thumbnail">
+          <div class="caption">
+            <span>Styling</span>
+            <span class="glyphicon glyphicon-sunglasses pull-right"></span>
+          </div>
+          <img src="https://ncn-nuevacarteya.com/wp-content/uploads/2017/11/chiquito-de-la-calzada.jpg" alt="Styling">
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <div class="thumbnail">
+          <div class="caption">
+            <span>Coloring</span>
+            <span class="glyphicon glyphicon-tint pull-right"></span>
+          </div>
+          <img src="http://static.diariosur.es/www/multimedia/201711/07/media/cortadas/la-trayectoria-artistica-de-chiquito-de-la-calzada-1510055885-k5vH-U5065732217OhH-624x385@Diario%20Sur.jpg" alt="Coloring">
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <div class="thumbnail">
+          <div class="caption">
+            <span>Haircuts</span>
+            <span class="glyphicon glyphicon-scissors pull-right"></span>
+          </div>
+          <img src="http://static3.diariosur.es/www/multimedia/201710/14/media/cortadas/chiquito-kBzD-U401025055735q2E-624x385@Diario%20Sur.JPG" alt="Haircuts">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- !OUR SERVICES-->
 
   <!-- SCRIPTS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
