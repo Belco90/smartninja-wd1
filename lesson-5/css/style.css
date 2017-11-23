@@ -13,3 +13,9 @@ body {
 textarea.no-resize {
   resize: none;
 }
+
+@media (max-width: 992px) {
+  .text-sm-center {
+    text-align: center;
+  }
+}
