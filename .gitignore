@@ -54,3 +54,4 @@ fabric.properties
 .idea/
 /local/
 /lesson-9/menu.txt
+/lesson-11/**/*.txt
