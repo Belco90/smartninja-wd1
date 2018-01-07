@@ -53,6 +53,7 @@ fabric.properties
 .gitignore
 .idea/
 /local/
-/lesson-9/menu.txt
-/lesson-11/**/*.txt
+/lesson_9/menu.txt
+/lesson_11/**/*.txt
+/lesson_13/*.csv
 venv/
