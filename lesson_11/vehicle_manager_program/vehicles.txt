@@ -1,0 +1,3 @@
+Ford,Mondeo,20000.2,04/09/1990
+Opel,Vivaro,15000.0,16/12/2007
+Citroen,Picasso,500.0,16/12/2017
