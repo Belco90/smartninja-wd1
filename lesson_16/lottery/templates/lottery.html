@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>SmartNinja basic Jinja template</title>
+</head>
+<body>
+    <h1>These are your lucky lottery numbers</h1>
+
+    <ul>
+        {% for num in lottery_numbers %}
+            <li>{{ num }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
