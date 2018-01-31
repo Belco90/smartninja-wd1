@@ -28,34 +28,7 @@ class BaseHandler(webapp2.RequestHandler):
 
 class MainHandler(BaseHandler):
     def get(self):
-        return self.render_template("calculator.html")
-
-    def post(self):
-        # get numbers and operation
-        first_number = int(self.request.get("first_number"))
-        second_number = int(self.request.get("second_number"))
-        operation = self.request.get("operation")
-
-        # check operation
-        result = None
-        if operation == "+":
-            result = first_number + second_number
-
-        elif operation == "-":
-            result = first_number - second_number
-
-        elif operation == "*":
-            result = first_number * second_number
-
-        elif operation == "/":
-            result = first_number / second_number
-
-        # TODO: check wrong operation
-
-        context = {
-            "result": result,
-        }
-        return self.render_template("calculator.html", params=context)
+        return self.render_template("create-message.html")
 
 
 app = webapp2.WSGIApplication([

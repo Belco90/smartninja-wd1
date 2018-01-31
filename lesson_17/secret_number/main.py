@@ -28,34 +28,27 @@ class BaseHandler(webapp2.RequestHandler):
 
 class MainHandler(BaseHandler):
     def get(self):
-        return self.render_template("calculator.html")
+        return self.render_template("secret_number.html")
 
     def post(self):
-        # get numbers and operation
-        first_number = int(self.request.get("first_number"))
-        second_number = int(self.request.get("second_number"))
-        operation = self.request.get("operation")
+        secret = 17
+        correct = False
+        guess = int(self.request.get("user_guess"))
 
-        # check operation
-        result = None
-        if operation == "+":
-            result = first_number + second_number
-
-        elif operation == "-":
-            result = first_number - second_number
-
-        elif operation == "*":
-            result = first_number * second_number
-
-        elif operation == "/":
-            result = first_number / second_number
-
-        # TODO: check wrong operation
+        if secret > guess:
+            result = "Sorry, but your guess is to low. Try a bit higher."
+        elif secret < guess:
+            result = "Sorry, but your guess is to high. Try a bit lower."
+        else:
+            correct = True
+            result = "Your answer is correct! The secret number is 22."
 
         context = {
             "result": result,
+            "guess": guess,
+            "correct": correct
         }
-        return self.render_template("calculator.html", params=context)
+        return self.render_template("secret_number.html", params=context)
 
 
 app = webapp2.WSGIApplication([
