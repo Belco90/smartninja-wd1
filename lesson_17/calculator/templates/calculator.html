@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>SmartNinja basic Jinja template</title>
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<h1>Calculator</h1>
+
+<form action="." method="post">
+  <input type="text" name="first_number">
+  <select name="operation">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+  </select>
+  <input type="text" name="second_number">
+  <input type="submit" value="Get result">
+</form>
+
+{% if result %}
+<p>The result is: {{ result }}</p>
+{% endif %}
+
+</body>
+</html>
