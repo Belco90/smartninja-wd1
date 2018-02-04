@@ -41,7 +41,7 @@ class MainHandler(BaseHandler):
             result = "Sorry, but your guess is to high. Try a bit lower."
         else:
             correct = True
-            result = "Your answer is correct! The secret number is 22."
+            result = "Your answer is correct! The secret number is {}.".format(secret)
 
         context = {
             "result": result,
