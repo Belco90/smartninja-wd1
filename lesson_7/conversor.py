@@ -14,7 +14,7 @@ while choice.lower() == "y" or choice.lower() == "yes":
 
     print "{} kilometers is {} miles.".format(km, miles)
     print "%s kilometers is %s miles." % (km, miles)
-    print km + " kilometers is " + miles + " miles."
+    print str(km) + " kilometers is " + str(miles) + " miles."
 
     choice = raw_input("Would you like to do another conversion (y/n): ")
 
