@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>SmartNinja basic Jinja template</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <h1>Calculator</h1>
+
+    <form method="post">
+        <label>Number 1</label>
+        <input type="text" name="number-1" value="{{number_a}}">
+
+        <label>Number 2</label>
+        <input type="text" name="number-2" value="{{number_b}}">
+
+        <button type="submit">Calculate</button>
+    </form>
+
+    {% if operation_result or operation_result == 0 %}
+        <h3>The result is {{ operation_result }}</h3>
+    {% endif %}
+</body>
+</html>
