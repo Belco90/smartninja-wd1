@@ -2,6 +2,7 @@ from google.appengine.ext import ndb
 
 
 class Message(ndb.Model):
-    message_text = ndb.StringProperty()
-    message_text = ndb.StringProperty()
+    text = ndb.TextProperty(required=True)
+    email = ndb.StringProperty()
+    name = ndb.StringProperty()
     created = ndb.DateTimeProperty(auto_now_add=True)

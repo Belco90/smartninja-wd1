@@ -2,6 +2,7 @@
 import os
 import jinja2
 import webapp2
+from models import Message
 
 template_dir = os.path.join(os.path.dirname(__file__), "templates")
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir), autoescape=False)
@@ -28,9 +29,29 @@ class BaseHandler(webapp2.RequestHandler):
 
 class MainHandler(BaseHandler):
     def get(self):
-        return self.render_template("create-message.html")
+        return self.render_template("index.html")
+
+
+class MessageCreateHandler(BaseHandler):
+    def get(self):
+        return self.render_template("message-create.html")
+
+    def post(self):
+        # get inputs values
+        user_name = self.request.get("name")
+        user_text = self.request.get("text")
+        user_email = self.request.get("email")
+
+        if not user_name:
+            user_name = "Anonymous"
+
+        new_message = Message(name=user_name, text=user_text, email=user_email)
+        new_message.put()
+
+        return self.redirect_to('main')
 
 
 app = webapp2.WSGIApplication([
-    webapp2.Route('/', MainHandler),
+    webapp2.Route('/', MainHandler, name="main"),
+    webapp2.Route('/message-create', MessageCreateHandler),
 ], debug=True)
