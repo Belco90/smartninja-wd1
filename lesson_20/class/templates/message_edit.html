@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>Edit message</title>
+    </head>
+
+    <body>
+        <h1>Edit message</h1>
+
+        {% if success %}
+        <p>Edited successfully</p>
+        {% endif %}
+
+        <form method="post" action="/message/{{ message.key.id() }}/edit">
+            <input name="some_text" value="{{ message.content }}">
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>
