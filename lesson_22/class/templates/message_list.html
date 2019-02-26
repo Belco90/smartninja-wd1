@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Message list</title>
+</head>
+<body>
+
+  <h1>List of all messages</h1>
+
+  {% for message_item in messages %}
+  <p>
+    <a href="/message-details/{{ message_item.key.id() }}">
+      {{ message_item.created_at }} - {{ message_item.content }}
+    </a>
+  </p>
+  {% endfor %}
+</body>
+</html>

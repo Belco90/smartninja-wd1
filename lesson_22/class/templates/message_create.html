@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>SmartNinja basic Jinja template</title>
+    </head>
+
+    <body>
+        {% if logged_in %}
+            <h1>Hello, {{ user.nickname() }}</h1>
+
+            <p>
+                <a href="/message-list">Message list</a>
+            </p>
+
+            <form method="post" action="/message-create">
+                <input name="some_text">
+                <button type="submit">Publish</button>
+            </form>
+
+            <p><a href="{{ logout_url }}">Logout</a></p>
+        {% else %}
+            <h1>Hello, Anonymous!</h1>
+
+            <p>Please login here: <a href="{{ login_url }}">Login</a></p>
+        {% endif %}
+    </body>
+</html>

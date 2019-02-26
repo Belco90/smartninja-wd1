@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Message details</title>
+</head>
+<body>
+
+  {% if message_item %}
+
+    <h1>Message details</h1>
+
+    <p>Message id: {{ message_item.key.id() }}</p>
+
+    <p>Message created at: {{ message_item.created_at }}</p>
+
+    <p>{{ message_item.content }}</p>
+
+  <a href="/message/{{ message_item.key.id() }}/edit">Edit</a>
+  <a href="/message/{{ message_item.key.id() }}/delete">Delete</a>
+
+  {% else %}
+    <h3>Message not found</h3>
+  {% endif %}
+</body>
+</html>
