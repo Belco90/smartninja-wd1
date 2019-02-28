@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Weather</title>
+</head>
+<body>
+  <h1>Weather in location: {{ weather_info.name }}</h1>
+
+  <p>Description: {{ weather_info.weather[0].description }}</p>
+
+  <div>
+    <p>Current temperature: {{ weather_info.main.temp }}</p>
+
+    <form>
+      <select name="temperature-unit">
+        <option value="imperial" {% if unit_choice == 'imperial' %}selected{% endif %}>
+            Fahrenheit
+        </option>
+        <option value="metric" {% if unit_choice == 'metric' %}selected{% endif %}>
+          Celsius
+        </option>
+        <option value="" {% if unit_choice == '' %}selected{% endif %}>
+          Kelvin
+        </option>
+      </select>
+
+      <button type="submit">Get temperature</button>
+    </form>
+
+  </div>
+
+</body>
+</html>
