@@ -48,7 +48,7 @@ class WeatherHandler(BaseHandler):
     def get(self):
         unit_choice = self.request.get("temperature-unit")
 
-        url = 'http://api.openweathermap.org/data/2.5/weather?q=Malaga&units={}&appid=db8b1ce1eaccb7d82980f5c1144e2eec'.format(unit_choice)
+        url = 'http://api.openweathermap.org/data/2.5/weather?q=Malaga&units={}&appid=CHANGEME'.format(unit_choice)
 
         response = urlfetch.fetch(url)
 
